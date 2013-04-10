@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
+		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
+		283BDA171278C0EF00E0C537 /* libmecab.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 283BDA161278C0EF00E0C537 /* libmecab.1.dylib */; };
+		283BDA361278C1D700E0C537 /* libmecab.1.dylib in Copy MeCab lib */ = {isa = PBXBuildFile; fileRef = 283BDA161278C0EF00E0C537 /* libmecab.1.dylib */; };
+		283BDA451278C48B00E0C537 /* MecabNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 283BDA421278C48B00E0C537 /* MecabNode.m */; };
+		283BDA461278C48B00E0C537 /* MecabTagger.m in Sources */ = {isa = PBXBuildFile; fileRef = 283BDA441278C48B00E0C537 /* MecabTagger.m */; };
+		284C3FA8140D81970001B088 /* chasen-tags.txt in Resources */ = {isa = PBXBuildFile; fileRef = 284C3FA7140D81970001B088 /* chasen-tags.txt */; };
+		284C3FAC140D87A20001B088 /* MecabTagMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 284C3FAB140D87A20001B088 /* MecabTagMap.m */; };
+		288D0BF215C58DFE004D05CD /* ipadic-verb-inflections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */; };
+		289FAD5115C5AEFF009BC027 /* char.bin in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF415C5A5C0004D05CD /* char.bin */; };
+		289FAD5215C5AEFF009BC027 /* char.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF515C5A5C0004D05CD /* char.def */; };
+		289FAD5315C5AEFF009BC027 /* dicrc in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF615C5A5C0004D05CD /* dicrc */; };
+		289FAD5415C5AEFF009BC027 /* feature.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF815C5A5C0004D05CD /* feature.def */; };
+		289FAD5515C5AEFF009BC027 /* left-id.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF915C5A5C0004D05CD /* left-id.def */; };
+		289FAD5615C5AEFF009BC027 /* matrix.bin in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFA15C5A5C0004D05CD /* matrix.bin */; };
+		289FAD5715C5AEFF009BC027 /* pos-id.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFC15C5A5C0004D05CD /* pos-id.def */; };
+		289FAD5815C5AEFF009BC027 /* rewrite.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFD15C5A5C0004D05CD /* rewrite.def */; };
+		289FAD5915C5AEFF009BC027 /* right-id.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFE15C5A5C0004D05CD /* right-id.def */; };
+		289FAD5A15C5AEFF009BC027 /* sys.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFF15C5A5C0004D05CD /* sys.dic */; };
+		289FAD5B15C5AEFF009BC027 /* unk.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0015C5A5C0004D05CD /* unk.def */; };
+		289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0115C5A5C0004D05CD /* unk.dic */; };
+		28D66A741401A5EA0012D907 /* MeCabChan.icns in Resources */ = {isa = PBXBuildFile; fileRef = 28D66A731401A5EA0012D907 /* MeCabChan.icns */; };
+		28E6EA40127B7D4F00752C16 /* MyDocument_Pasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */; };
+		28F89858141AC1F9003AD368 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F89857141AC1F9003AD368 /* libiconv.2.dylib */; };
+		28F8985A141AC2C6003AD368 /* mecabrc in Resources */ = {isa = PBXBuildFile; fileRef = 28F89859141AC2C6003AD368 /* mecabrc */; };
+		28F8985B141AC5F2003AD368 /* libiconv.2.dylib in Copy MeCab lib */ = {isa = PBXBuildFile; fileRef = 28F89857141AC1F9003AD368 /* libiconv.2.dylib */; };
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		283BDA371278C1F500E0C537 /* Copy ipadic */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ipadic;
+			dstSubfolderSpec = 7;
+			files = (
+				289FAD5115C5AEFF009BC027 /* char.bin in Copy ipadic */,
+				289FAD5215C5AEFF009BC027 /* char.def in Copy ipadic */,
+				289FAD5315C5AEFF009BC027 /* dicrc in Copy ipadic */,
+				289FAD5415C5AEFF009BC027 /* feature.def in Copy ipadic */,
+				289FAD5515C5AEFF009BC027 /* left-id.def in Copy ipadic */,
+				289FAD5615C5AEFF009BC027 /* matrix.bin in Copy ipadic */,
+				289FAD5715C5AEFF009BC027 /* pos-id.def in Copy ipadic */,
+				289FAD5815C5AEFF009BC027 /* rewrite.def in Copy ipadic */,
+				289FAD5915C5AEFF009BC027 /* right-id.def in Copy ipadic */,
+				289FAD5A15C5AEFF009BC027 /* sys.dic in Copy ipadic */,
+				289FAD5B15C5AEFF009BC027 /* unk.def in Copy ipadic */,
+				289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */,
+			);
+			name = "Copy ipadic";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		283BDA381278C1F500E0C537 /* Copy MeCab lib */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				28F8985B141AC5F2003AD368 /* libiconv.2.dylib in Copy MeCab lib */,
+				283BDA361278C1D700E0C537 /* libmecab.1.dylib in Copy MeCab lib */,
+			);
+			name = "Copy MeCab lib";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58290DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
+		1DDD582B0DA1D0D100B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2564AD2C0F5327BB00F57823 /* MeCabChan_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCabChan_Prefix.pch; sourceTree = "<group>"; };
+		283BDA161278C0EF00E0C537 /* libmecab.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmecab.1.dylib; sourceTree = "<group>"; };
+		283BDA3A1278C42D00E0C537 /* mecab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mecab.h; path = include/mecab.h; sourceTree = "<group>"; };
+		283BDA411278C48B00E0C537 /* MecabNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MecabNode.h; sourceTree = "<group>"; };
+		283BDA421278C48B00E0C537 /* MecabNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MecabNode.m; sourceTree = "<group>"; };
+		283BDA431278C48B00E0C537 /* MecabTagger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MecabTagger.h; sourceTree = "<group>"; };
+		283BDA441278C48B00E0C537 /* MecabTagger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MecabTagger.m; sourceTree = "<group>"; };
+		284C3FA7140D81970001B088 /* chasen-tags.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "chasen-tags.txt"; path = "resources/chasen-tags.txt"; sourceTree = "<group>"; };
+		284C3FAA140D87A20001B088 /* MecabTagMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MecabTagMap.h; sourceTree = "<group>"; };
+		284C3FAB140D87A20001B088 /* MecabTagMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MecabTagMap.m; sourceTree = "<group>"; };
+		288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "ipadic-verb-inflections.txt"; path = "resources/ipadic-verb-inflections.txt"; sourceTree = "<group>"; };
+		288D0BF415C5A5C0004D05CD /* char.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = char.bin; sourceTree = "<group>"; };
+		288D0BF515C5A5C0004D05CD /* char.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char.def; sourceTree = "<group>"; };
+		288D0BF615C5A5C0004D05CD /* dicrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dicrc; sourceTree = "<group>"; };
+		288D0BF815C5A5C0004D05CD /* feature.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = feature.def; sourceTree = "<group>"; };
+		288D0BF915C5A5C0004D05CD /* left-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "left-id.def"; sourceTree = "<group>"; };
+		288D0BFA15C5A5C0004D05CD /* matrix.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = matrix.bin; sourceTree = "<group>"; };
+		288D0BFC15C5A5C0004D05CD /* pos-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pos-id.def"; sourceTree = "<group>"; };
+		288D0BFD15C5A5C0004D05CD /* rewrite.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rewrite.def; sourceTree = "<group>"; };
+		288D0BFE15C5A5C0004D05CD /* right-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "right-id.def"; sourceTree = "<group>"; };
+		288D0BFF15C5A5C0004D05CD /* sys.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = sys.dic; sourceTree = "<group>"; };
+		288D0C0015C5A5C0004D05CD /* unk.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unk.def; sourceTree = "<group>"; };
+		288D0C0115C5A5C0004D05CD /* unk.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = unk.dic; sourceTree = "<group>"; };
+		28D66A731401A5EA0012D907 /* MeCabChan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MeCabChan.icns; sourceTree = "<group>"; };
+		28E6EA3E127B7D3800752C16 /* MyDocument_Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument_Pasteboard.h; sourceTree = "<group>"; };
+		28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument_Pasteboard.m; sourceTree = "<group>"; };
+		28F89856141AB186003AD368 /* MeCabChan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MeCabChan.entitlements; sourceTree = "<group>"; };
+		28F89857141AC1F9003AD368 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libiconv.2.dylib; sourceTree = "<group>"; };
+		28F89859141AC2C6003AD368 /* mecabrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mecabrc; path = resources/mecabrc; sourceTree = "<group>"; };
+		2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyDocument.m; path = src/MyDocument.m; sourceTree = "<group>"; };
+		2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyDocument.h; path = src/MyDocument.h; sourceTree = "<group>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D15AC360486D014006FF6A4 /* MeCabChan-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MeCabChan-Info.plist"; sourceTree = "<group>"; };
+		8D15AC370486D014006FF6A4 /* MeCabChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeCabChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				283BDA171278C0EF00E0C537 /* libmecab.1.dylib in Frameworks */,
+				28F89858141AC1F9003AD368 /* libiconv.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* MeCabChan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		283BDA151278C04200E0C537 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				28F89857141AC1F9003AD368 /* libiconv.2.dylib */,
+				283BDA161278C0EF00E0C537 /* libmecab.1.dylib */,
+			);
+			name = Libraries;
+			path = lib;
+			sourceTree = "<group>";
+		};
+		283BDA391278C3E500E0C537 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				283BDA411278C48B00E0C537 /* MecabNode.h */,
+				283BDA421278C48B00E0C537 /* MecabNode.m */,
+				283BDA431278C48B00E0C537 /* MecabTagger.h */,
+				283BDA441278C48B00E0C537 /* MecabTagger.m */,
+				284C3FAA140D87A20001B088 /* MecabTagMap.h */,
+				284C3FAB140D87A20001B088 /* MecabTagMap.m */,
+			);
+			name = Model;
+			path = src/model;
+			sourceTree = "<group>";
+		};
+		288D0BF315C5A5C0004D05CD /* ipadic */ = {
+			isa = PBXGroup;
+			children = (
+				288D0BF415C5A5C0004D05CD /* char.bin */,
+				288D0BF515C5A5C0004D05CD /* char.def */,
+				288D0BF615C5A5C0004D05CD /* dicrc */,
+				288D0BF815C5A5C0004D05CD /* feature.def */,
+				288D0BF915C5A5C0004D05CD /* left-id.def */,
+				288D0BFA15C5A5C0004D05CD /* matrix.bin */,
+				288D0BFC15C5A5C0004D05CD /* pos-id.def */,
+				288D0BFD15C5A5C0004D05CD /* rewrite.def */,
+				288D0BFE15C5A5C0004D05CD /* right-id.def */,
+				288D0BFF15C5A5C0004D05CD /* sys.dic */,
+				288D0C0015C5A5C0004D05CD /* unk.def */,
+				288D0C0115C5A5C0004D05CD /* unk.dic */,
+			);
+			name = ipadic;
+			path = "resources/ipadic-utf8";
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* MeCabChan */ = {
+			isa = PBXGroup;
+			children = (
+				28F89856141AB186003AD368 /* MeCabChan.entitlements */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				283BDA151278C04200E0C537 /* Libraries */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = MeCabChan;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				283BDA391278C3E500E0C537 /* Model */,
+				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
+				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				28E6EA3E127B7D3800752C16 /* MyDocument_Pasteboard.h */,
+				28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				283BDA3A1278C42D00E0C537 /* mecab.h */,
+				2564AD2C0F5327BB00F57823 /* MeCabChan_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				288D0BF315C5A5C0004D05CD /* ipadic */,
+				28F89859141AC2C6003AD368 /* mecabrc */,
+				284C3FA7140D81970001B088 /* chasen-tags.txt */,
+				288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				28D66A731401A5EA0012D907 /* MeCabChan.icns */,
+				8D15AC360486D014006FF6A4 /* MeCabChan-Info.plist */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
+				1DDD582A0DA1D0D100B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* MeCabChan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "MeCabChan" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				283BDA371278C1F500E0C537 /* Copy ipadic */,
+				283BDA381278C1F500E0C537 /* Copy MeCab lib */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeCabChan;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MeCabChan;
+			productReference = 8D15AC370486D014006FF6A4 /* MeCabChan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "MeCabChan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* MeCabChan */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* MeCabChan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
+				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
+				28D66A741401A5EA0012D907 /* MeCabChan.icns in Resources */,
+				284C3FA8140D81970001B088 /* chasen-tags.txt in Resources */,
+				28F8985A141AC2C6003AD368 /* mecabrc in Resources */,
+				288D0BF215C58DFE004D05CD /* ipadic-verb-inflections.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				283BDA451278C48B00E0C537 /* MecabNode.m in Sources */,
+				283BDA461278C48B00E0C537 /* MecabTagger.m in Sources */,
+				28E6EA40127B7D4F00752C16 /* MyDocument_Pasteboard.m in Sources */,
+				284C3FAC140D87A20001B088 /* MecabTagMap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58280DA1D0D100B32029 /* MyDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58290DA1D0D100B32029 /* English */,
+			);
+			name = MyDocument.xib;
+			sourceTree = "<group>";
+		};
+		1DDD582A0DA1D0D100B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD582B0DA1D0D100B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C05733C808A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
+				CODE_SIGN_IDENTITY = "kaixo.de Code Signing Certificate";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MeCabChan_Prefix.pch;
+				INFOPLIST_FILE = "MeCabChan-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_NAME = MeCabChan;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		C05733C908A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
+				CODE_SIGN_IDENTITY = "kaixo.de Code Signing Certificate";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MeCabChan_Prefix.pch;
+				INFOPLIST_FILE = "MeCabChan-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = MeCabChan;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.7;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		C05733CC08A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "kaixo.de Code Signing Certificate";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C05733CD08A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "kaixo.de Code Signing Certificate";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "MeCabChan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733C808A9546B00998B17 /* Debug */,
+				C05733C908A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "MeCabChan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733CC08A9546B00998B17 /* Debug */,
+				C05733CD08A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}
