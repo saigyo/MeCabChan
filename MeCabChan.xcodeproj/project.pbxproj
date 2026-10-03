@@ -15,16 +15,9 @@
 		284C3FAC140D87A20001B088 /* MecabTagMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 284C3FAB140D87A20001B088 /* MecabTagMap.m */; };
 		288D0BF215C58DFE004D05CD /* ipadic-verb-inflections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */; };
 		289FAD5115C5AEFF009BC027 /* char.bin in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF415C5A5C0004D05CD /* char.bin */; };
-		289FAD5215C5AEFF009BC027 /* char.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF515C5A5C0004D05CD /* char.def */; };
 		289FAD5315C5AEFF009BC027 /* dicrc in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF615C5A5C0004D05CD /* dicrc */; };
-		289FAD5415C5AEFF009BC027 /* feature.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF815C5A5C0004D05CD /* feature.def */; };
-		289FAD5515C5AEFF009BC027 /* left-id.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BF915C5A5C0004D05CD /* left-id.def */; };
 		289FAD5615C5AEFF009BC027 /* matrix.bin in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFA15C5A5C0004D05CD /* matrix.bin */; };
-		289FAD5715C5AEFF009BC027 /* pos-id.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFC15C5A5C0004D05CD /* pos-id.def */; };
-		289FAD5815C5AEFF009BC027 /* rewrite.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFD15C5A5C0004D05CD /* rewrite.def */; };
-		289FAD5915C5AEFF009BC027 /* right-id.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFE15C5A5C0004D05CD /* right-id.def */; };
 		289FAD5A15C5AEFF009BC027 /* sys.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFF15C5A5C0004D05CD /* sys.dic */; };
-		289FAD5B15C5AEFF009BC027 /* unk.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0015C5A5C0004D05CD /* unk.def */; };
 		289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0115C5A5C0004D05CD /* unk.dic */; };
 		28D66A741401A5EA0012D907 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 28D66A731401A5EA0012D907 /* AppIcon.icon */; };
 		28E6EA40127B7D4F00752C16 /* MyDocument_Pasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */; };
@@ -45,16 +38,9 @@
 			dstSubfolderSpec = 7;
 			files = (
 				289FAD5115C5AEFF009BC027 /* char.bin in Copy ipadic */,
-				289FAD5215C5AEFF009BC027 /* char.def in Copy ipadic */,
 				289FAD5315C5AEFF009BC027 /* dicrc in Copy ipadic */,
-				289FAD5415C5AEFF009BC027 /* feature.def in Copy ipadic */,
-				289FAD5515C5AEFF009BC027 /* left-id.def in Copy ipadic */,
 				289FAD5615C5AEFF009BC027 /* matrix.bin in Copy ipadic */,
-				289FAD5715C5AEFF009BC027 /* pos-id.def in Copy ipadic */,
-				289FAD5815C5AEFF009BC027 /* rewrite.def in Copy ipadic */,
-				289FAD5915C5AEFF009BC027 /* right-id.def in Copy ipadic */,
 				289FAD5A15C5AEFF009BC027 /* sys.dic in Copy ipadic */,
-				289FAD5B15C5AEFF009BC027 /* unk.def in Copy ipadic */,
 				289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */,
 			);
 			name = "Copy ipadic";
@@ -88,16 +74,9 @@
 		284C3FAB140D87A20001B088 /* MecabTagMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MecabTagMap.m; sourceTree = "<group>"; };
 		288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "ipadic-verb-inflections.txt"; path = "resources/ipadic-verb-inflections.txt"; sourceTree = "<group>"; };
 		288D0BF415C5A5C0004D05CD /* char.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = char.bin; sourceTree = "<group>"; };
-		288D0BF515C5A5C0004D05CD /* char.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char.def; sourceTree = "<group>"; };
 		288D0BF615C5A5C0004D05CD /* dicrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dicrc; sourceTree = "<group>"; };
-		288D0BF815C5A5C0004D05CD /* feature.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = feature.def; sourceTree = "<group>"; };
-		288D0BF915C5A5C0004D05CD /* left-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "left-id.def"; sourceTree = "<group>"; };
 		288D0BFA15C5A5C0004D05CD /* matrix.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = matrix.bin; sourceTree = "<group>"; };
-		288D0BFC15C5A5C0004D05CD /* pos-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pos-id.def"; sourceTree = "<group>"; };
-		288D0BFD15C5A5C0004D05CD /* rewrite.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rewrite.def; sourceTree = "<group>"; };
-		288D0BFE15C5A5C0004D05CD /* right-id.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "right-id.def"; sourceTree = "<group>"; };
 		288D0BFF15C5A5C0004D05CD /* sys.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = sys.dic; sourceTree = "<group>"; };
-		288D0C0015C5A5C0004D05CD /* unk.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unk.def; sourceTree = "<group>"; };
 		288D0C0115C5A5C0004D05CD /* unk.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = unk.dic; sourceTree = "<group>"; };
 		28D66A731401A5EA0012D907 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		28E6EA3E127B7D3800752C16 /* MyDocument_Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument_Pasteboard.h; sourceTree = "<group>"; };
@@ -180,20 +159,13 @@
 			isa = PBXGroup;
 			children = (
 				288D0BF415C5A5C0004D05CD /* char.bin */,
-				288D0BF515C5A5C0004D05CD /* char.def */,
 				288D0BF615C5A5C0004D05CD /* dicrc */,
-				288D0BF815C5A5C0004D05CD /* feature.def */,
-				288D0BF915C5A5C0004D05CD /* left-id.def */,
 				288D0BFA15C5A5C0004D05CD /* matrix.bin */,
-				288D0BFC15C5A5C0004D05CD /* pos-id.def */,
-				288D0BFD15C5A5C0004D05CD /* rewrite.def */,
-				288D0BFE15C5A5C0004D05CD /* right-id.def */,
 				288D0BFF15C5A5C0004D05CD /* sys.dic */,
-				288D0C0015C5A5C0004D05CD /* unk.def */,
 				288D0C0115C5A5C0004D05CD /* unk.dic */,
 			);
 			name = ipadic;
-			path = "resources/ipadic-utf8";
+			path = vendor/ipadic;
 			sourceTree = "<group>";
 		};
 		2A37F4AAFDCFA73011CA2CEA /* MeCabChan */ = {
@@ -377,6 +349,11 @@
 			outputPaths = (
 				"$(SRCROOT)/vendor/mecab/lib/libmecab.a",
 				"$(SRCROOT)/vendor/mecab/include/mecab.h",
+				"$(SRCROOT)/vendor/ipadic/sys.dic",
+				"$(SRCROOT)/vendor/ipadic/unk.dic",
+				"$(SRCROOT)/vendor/ipadic/matrix.bin",
+				"$(SRCROOT)/vendor/ipadic/char.bin",
+				"$(SRCROOT)/vendor/ipadic/dicrc",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
