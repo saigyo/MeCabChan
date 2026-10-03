@@ -16,8 +16,8 @@ Open `MeCabChan.xcodeproj` and build the `MeCabChan` scheme, or run:
 
     xcodebuild test -project MeCabChan.xcodeproj -scheme MeCabChan
 
-The first build fetches MeCab from [taku910/mecab](https://github.com/taku910/mecab) at a pinned commit and compiles
-it into `vendor/mecab` (see `scripts/build-mecab.sh`).
+The first build fetches MeCab from [taku910/mecab](https://github.com/taku910/mecab) at a pinned commit, compiles
+the library into `vendor/mecab` and the IPADIC dictionary into `vendor/ipadic` (see `scripts/build-mecab.sh`).
 
 Releases
 --------
@@ -34,3 +34,18 @@ packages it as a DMG, notarizes it and attaches it to a GitHub release. The work
 | `NOTARY_API_KEY_P8_BASE64` | App Store Connect API key (`.p8`), base64-encoded |
 | `NOTARY_API_KEY_ID` | Key ID of the API key |
 | `NOTARY_API_ISSUER_ID` | Issuer ID of the API key |
+
+License
+-------
+
+MeCabChan is licensed under the [Apache License, Version 2.0](LICENSE).
+
+The app includes the following third-party components. Their license texts are in the [licenses](licenses) folder
+and are also bundled with the app under `Contents/Resources/licenses`.
+
+- [MeCab](https://github.com/taku910/mecab), © 2001–2008 Taku Kudo and © 2004–2008 Nippon Telegraph and Telephone
+  Corporation. MeCab is available under the GPL, the LGPL or the BSD License; MeCabChan uses it under the
+  [BSD License](licenses/MeCab.txt) and links it statically.
+- [IPADIC](https://github.com/taku910/mecab/tree/master/mecab-ipadic), © 2000–2003 Nara Institute of Science and
+  Technology, with a large portion of the dictionary entries originating from ICOT Free Software. It is distributed
+  under the [IPADIC license](licenses/IPADIC.txt), without any warranty.

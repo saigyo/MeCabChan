@@ -28,6 +28,9 @@
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */; };
+		28B1D0252E9F000100C0FFEE /* LICENSE in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0222E9F000100C0FFEE /* LICENSE */; };
+		28B1D0262E9F000100C0FFEE /* MeCab.txt in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0232E9F000100C0FFEE /* MeCab.txt */; };
+		28B1D0272E9F000100C0FFEE /* IPADIC.txt in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0242E9F000100C0FFEE /* IPADIC.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +47,19 @@
 				289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */,
 			);
 			name = "Copy ipadic";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B1D0202E9F000100C0FFEE /* Copy licenses */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = licenses;
+			dstSubfolderSpec = 7;
+			files = (
+				28B1D0252E9F000100C0FFEE /* LICENSE in Copy licenses */,
+				28B1D0262E9F000100C0FFEE /* MeCab.txt in Copy licenses */,
+				28B1D0272E9F000100C0FFEE /* IPADIC.txt in Copy licenses */,
+			);
+			name = "Copy licenses";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -93,6 +109,9 @@
 		8D15AC370486D014006FF6A4 /* MeCabChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeCabChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MecabTaggerTests.m; sourceTree = "<group>"; };
 		28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeCabChanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B1D0222E9F000100C0FFEE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		28B1D0232E9F000100C0FFEE /* MeCab.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MeCab.txt; sourceTree = "<group>"; };
+		28B1D0242E9F000100C0FFEE /* IPADIC.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = IPADIC.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				288D0BF315C5A5C0004D05CD /* ipadic */,
+				28B1D0212E9F000100C0FFEE /* licenses */,
 				28F89859141AC2C6003AD368 /* mecabrc */,
 				284C3FA7140D81970001B088 /* chasen-tags.txt */,
 				288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */,
@@ -237,6 +257,16 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		28B1D0212E9F000100C0FFEE /* licenses */ = {
+			isa = PBXGroup;
+			children = (
+				28B1D0222E9F000100C0FFEE /* LICENSE */,
+				28B1D0232E9F000100C0FFEE /* MeCab.txt */,
+				28B1D0242E9F000100C0FFEE /* IPADIC.txt */,
+			);
+			path = licenses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +279,7 @@
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
 				283BDA371278C1F500E0C537 /* Copy ipadic */,
+				28B1D0202E9F000100C0FFEE /* Copy licenses */,
 			);
 			buildRules = (
 			);
