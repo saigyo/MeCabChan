@@ -12,7 +12,10 @@
 @implementation MecabTagger
 -(id)init
 {
-	[super init];
+	self = [super init];
+	if (!self) {
+		return nil;
+	}
 	NSBundle* bundle = [NSBundle mainBundle];
 	NSString* resourcePath = [bundle resourcePath];
 	
@@ -22,6 +25,10 @@
 	const char* mecabArgs_cstr = [mecabArgs UTF8String];
 	
 	mecab_tagger = mecab_new2(mecabArgs_cstr);
+	if (!mecab_tagger) {
+		NSLog(@"MecabTagger.init: failed to create mecab tagger: %s", mecab_strerror(NULL));
+		return nil;
+	}
 	const mecab_dictionary_info_t* dict_info = mecab_dictionary_info(mecab_tagger);
 	
 	NSString *dictFilename = [NSString stringWithUTF8String:(dict_info->filename)];
@@ -31,16 +38,9 @@
 	return self;
 }
 
--(void)finalize
-{
-	mecab_destroy(mecab_tagger);
-	[super finalize];
-}
-
 -(void)dealloc
 {
 	mecab_destroy(mecab_tagger);
-	[super dealloc];
 }
 
 -(NSArray*)parse:(NSString *)sentence
@@ -48,6 +48,10 @@
 	NSLog(@"MecabTagger.parse: sentence = %@", sentence);
 	const char* sentence_cstr = [sentence UTF8String];
 	const char* parse_cstr = mecab_sparse_tostr(mecab_tagger, sentence_cstr);
+	if (!parse_cstr) {
+		NSLog(@"MecabTagger.parse: mecab error: %s", mecab_strerror(mecab_tagger));
+		return @[];
+	}
 	NSString* parse = [NSString stringWithUTF8String:parse_cstr];
 	NSLog(@"MecabTagger.parse: parse = \n%@", parse);
 	
@@ -82,7 +86,7 @@
 {
 	NSArray* parse = [self parse:sentence];
 	NSMutableArray* parseToNodes = [NSMutableArray arrayWithCapacity:[parse count]];
-	int number = 0;
+	NSInteger number = 0;
 	for(NSString* line in parse) {
 		if ([line hasPrefix:@"EOS"]) {
 			break;

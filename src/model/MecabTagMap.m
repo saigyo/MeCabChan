@@ -16,12 +16,12 @@
     NSMutableArray* tags = [NSMutableArray arrayWithCapacity:100];
     
     NSArray* lines = [tagSource componentsSeparatedByString:@"\n"];
-    for (int i = 0; i < [lines count]; i++) {
+    for (NSUInteger i = 0; i < [lines count]; i++) {
         NSString* line = [lines objectAtIndex:i];
         NSArray* parts = [line componentsSeparatedByString:@" "];
         
         if ([parts count]<3) {
-            NSLog(@"MecabTagMap.parse: oops, line %d is too short: %@", i, line);
+            NSLog(@"MecabTagMap.parse: oops, line %lu is too short: %@", (unsigned long)i, line);
             continue;
         }
         
@@ -37,9 +37,7 @@
 
 - (id)initFrom:(NSString*)resourceFileName
 {
-    if (!self) {
-        self = [super init];
-    }
+    self = [super init];
     if (self) {
         NSBundle* bundle = [NSBundle mainBundle];
         NSString* resourcePath = [bundle resourcePath];
@@ -56,15 +54,9 @@
 
 - (id)init
 {
-    self = [super init];
     return [self initFrom:@"chasen-tags.txt"];
 }
 
--(void)dealloc
-{
-    [map dealloc];
-    [super dealloc];
-}
     
 - (NSString *)description
 {
