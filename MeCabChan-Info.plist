@@ -27,8 +27,6 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>MeCabChan</string>
-	<key>CFBundleIconFile</key>
-	<string>MeCabChan.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>

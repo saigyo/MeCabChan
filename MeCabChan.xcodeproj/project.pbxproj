@@ -26,7 +26,7 @@
 		289FAD5A15C5AEFF009BC027 /* sys.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFF15C5A5C0004D05CD /* sys.dic */; };
 		289FAD5B15C5AEFF009BC027 /* unk.def in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0015C5A5C0004D05CD /* unk.def */; };
 		289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0115C5A5C0004D05CD /* unk.dic */; };
-		28D66A741401A5EA0012D907 /* MeCabChan.icns in Resources */ = {isa = PBXBuildFile; fileRef = 28D66A731401A5EA0012D907 /* MeCabChan.icns */; };
+		28D66A741401A5EA0012D907 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 28D66A731401A5EA0012D907 /* AppIcon.icon */; };
 		28E6EA40127B7D4F00752C16 /* MyDocument_Pasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */; };
 		28F8985A141AC2C6003AD368 /* mecabrc in Resources */ = {isa = PBXBuildFile; fileRef = 28F89859141AC2C6003AD368 /* mecabrc */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -99,7 +99,7 @@
 		288D0BFF15C5A5C0004D05CD /* sys.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = sys.dic; sourceTree = "<group>"; };
 		288D0C0015C5A5C0004D05CD /* unk.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unk.def; sourceTree = "<group>"; };
 		288D0C0115C5A5C0004D05CD /* unk.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = unk.dic; sourceTree = "<group>"; };
-		28D66A731401A5EA0012D907 /* MeCabChan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MeCabChan.icns; sourceTree = "<group>"; };
+		28D66A731401A5EA0012D907 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		28E6EA3E127B7D3800752C16 /* MyDocument_Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument_Pasteboard.h; sourceTree = "<group>"; };
 		28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument_Pasteboard.m; sourceTree = "<group>"; };
 		28F89856141AB186003AD368 /* MeCabChan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MeCabChan.entitlements; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 				284C3FA7140D81970001B088 /* chasen-tags.txt */,
 				288D0BF115C58DFE004D05CD /* ipadic-verb-inflections.txt */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
-				28D66A731401A5EA0012D907 /* MeCabChan.icns */,
+				28D66A731401A5EA0012D907 /* AppIcon.icon */,
 				8D15AC360486D014006FF6A4 /* MeCabChan-Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 				1DDD58280DA1D0D100B32029 /* MyDocument.xib */,
@@ -343,7 +343,7 @@
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
-				28D66A741401A5EA0012D907 /* MeCabChan.icns in Resources */,
+				28D66A741401A5EA0012D907 /* AppIcon.icon in Resources */,
 				284C3FA8140D81970001B088 /* chasen-tags.txt in Resources */,
 				28F8985A141AC2C6003AD368 /* mecabrc in Resources */,
 				288D0BF215C58DFE004D05CD /* ipadic-verb-inflections.txt in Resources */,
@@ -455,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -478,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
