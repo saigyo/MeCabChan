@@ -34,6 +34,7 @@
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,16 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		28B1D0172E9F000100C0FFEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D15AC270486D014006FF6A4;
+			remoteInfo = MeCabChan;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -101,6 +112,8 @@
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D15AC360486D014006FF6A4 /* MeCabChan-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MeCabChan-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* MeCabChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeCabChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MecabTaggerTests.m; sourceTree = "<group>"; };
+		28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeCabChanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B1D0152E9F000100C0FFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8D15AC370486D014006FF6A4 /* MeCabChan.app */,
+				28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +204,7 @@
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				28B1D01C2E9F000100C0FFEE /* Tests */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 			);
 			name = MeCabChan;
@@ -235,6 +257,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		28B1D01C2E9F000100C0FFEE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +287,24 @@
 			productName = MeCabChan;
 			productReference = 8D15AC370486D014006FF6A4 /* MeCabChan.app */;
 			productType = "com.apple.product-type.application";
+		};
+		28B1D0132E9F000100C0FFEE /* MeCabChanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B1D0192E9F000100C0FFEE /* Build configuration list for PBXNativeTarget "MeCabChanTests" */;
+			buildPhases = (
+				28B1D0142E9F000100C0FFEE /* Sources */,
+				28B1D0152E9F000100C0FFEE /* Frameworks */,
+				28B1D0162E9F000100C0FFEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28B1D0182E9F000100C0FFEE /* PBXTargetDependency */,
+			);
+			name = MeCabChanTests;
+			productName = MeCabChanTests;
+			productReference = 28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -281,6 +329,7 @@
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* MeCabChan */,
+				28B1D0132E9F000100C0FFEE /* MeCabChanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,6 +347,13 @@
 				284C3FA8140D81970001B088 /* chasen-tags.txt in Resources */,
 				28F8985A141AC2C6003AD368 /* mecabrc in Resources */,
 				288D0BF215C58DFE004D05CD /* ipadic-verb-inflections.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28B1D0162E9F000100C0FFEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +397,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28B1D0142E9F000100C0FFEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -377,6 +441,14 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
+
+/* Begin PBXTargetDependency section */
+		28B1D0182E9F000100C0FFEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D15AC270486D014006FF6A4 /* MeCabChan */;
+			targetProxy = 28B1D0172E9F000100C0FFEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C05733C808A9546B00998B17 /* Debug */ = {
@@ -538,6 +610,34 @@
 			};
 			name = Release;
 		};
+		28B1D01A2E9F000100C0FFEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/src/model";
+				PRODUCT_BUNDLE_IDENTIFIER = de.kaixo.MeCabChanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/include";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeCabChan.app/Contents/MacOS/MeCabChan";
+			};
+			name = Debug;
+		};
+		28B1D01B2E9F000100C0FFEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/src/model";
+				PRODUCT_BUNDLE_IDENTIFIER = de.kaixo.MeCabChanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/include";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeCabChan.app/Contents/MacOS/MeCabChan";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,6 +655,15 @@
 			buildConfigurations = (
 				C05733CC08A9546B00998B17 /* Debug */,
 				C05733CD08A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28B1D0192E9F000100C0FFEE /* Build configuration list for PBXNativeTarget "MeCabChanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B1D01A2E9F000100C0FFEE /* Debug */,
+				28B1D01B2E9F000100C0FFEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
