@@ -1,2 +1,9 @@
-build
+build/
+DerivedData/
+vendor/
 resources/ipadic-utf8-old
+xcuserdata/
+*.xcuserstate
+*.mode1v3
+*.pbxuser
+.DS_Store
