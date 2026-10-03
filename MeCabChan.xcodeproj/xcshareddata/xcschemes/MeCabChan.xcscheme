@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "28B1D0132E9F000100C0FFEE"
+               BuildableName = "MeCabChanTests.xctest"
+               BlueprintName = "MeCabChanTests"
+               ReferencedContainer = "container:MeCabChan.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
