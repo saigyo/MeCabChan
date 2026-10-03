@@ -34,7 +34,7 @@
     MecabTagMap *inflectionMap;
     BOOL translatePosTags;
 }
-@property (readwrite, retain) NSArray *mecabNodes;
+@property (readwrite, strong) NSArray *mecabNodes;
 - (IBAction)clearSource:(id)sender;
 - (IBAction)tokenize:(id)sender;
 - (IBAction)navigateHistory:(id)sender;

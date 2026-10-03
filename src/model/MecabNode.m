@@ -25,7 +25,7 @@
 }
 +(id)nodeFromParseLine:(NSString*)line withNumber:(NSInteger)number withTagMap:(MecabTagMap*)tagMap withInflectionMap:(MecabTagMap *)inflectionMap
 {
-	MecabNode* node = [[[MecabNode alloc] initFromParseLine:line withNumber:number withTagMap:tagMap withInflectionMap:inflectionMap] autorelease];
+	MecabNode* node = [[MecabNode alloc] initFromParseLine:line withNumber:number withTagMap:tagMap withInflectionMap:inflectionMap];
 	// NSLog(@"Created %@", node);
 	return node;    
 }
@@ -33,17 +33,6 @@
 -(id)init
 {
 	return [self initFromParseLine:@""];
-}
-
--(void)dealloc
-{
-	[token release];
-	[reading release];
-	[lemma release];
-	[posTag release];
-	[stemType release];
-	[inflection release];
-	[super dealloc];
 }
 
 -(id)initFromParseLine:(NSString *)line
@@ -63,36 +52,39 @@
 
 -(id)initFromParseLine:(NSString*)line withNumber:(NSInteger)num withTagMap:(MecabTagMap*)tagMap withInflectionMap:(MecabTagMap *)inflectionMap
 {
-	[super init];
+	self = [super init];
+	if (!self) {
+		return nil;
+	}
 	number = num;
 	NSArray* features = [line componentsSeparatedByString:@"\t"];
-	int count = [features count];
+	NSUInteger count = [features count];
 	if (count > 0) {
-		token = [[features objectAtIndex:0] retain];
+		token = [features objectAtIndex:0];
 	} 
 	if (count > 1) {
-		reading = [[features objectAtIndex:1] retain];
+		reading = [features objectAtIndex:1];
 	}
 	if (count > 2) {
-		lemma = [[features objectAtIndex:2] retain];
+		lemma = [features objectAtIndex:2];
 	}
 	if (count > 3) {
         if (tagMap) {
-            posTag = [[[tagMap map] objectForKey:[features objectAtIndex:3]] retain];
+            posTag = [[tagMap map] objectForKey:[features objectAtIndex:3]];
         }
         if (posTag == NULL) {
-            posTag = [[features objectAtIndex:3] retain];
+            posTag = [features objectAtIndex:3];
         }
 	}
 	if (count > 4) {
-		stemType = [[features objectAtIndex:4] retain];
+		stemType = [features objectAtIndex:4];
 	}
 	if (count > 5) {
         if (inflectionMap) {
-            inflection = [[[inflectionMap map] objectForKey:[features objectAtIndex:5]] retain];
+            inflection = [[inflectionMap map] objectForKey:[features objectAtIndex:5]];
         }
         if (inflection == NULL) {
-            inflection = [[features objectAtIndex:5] retain];
+            inflection = [features objectAtIndex:5];
         }
 	}
 	

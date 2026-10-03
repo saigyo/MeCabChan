@@ -56,7 +56,7 @@
 #pragma mark /* Formatting method in support of writing to the pasteboard */
 
 - (NSString *)stringFromNodes:(NSArray *)nodes {
-    // When we are writing out NSStringPboardType, we create a string with one line per transaction and tabs between items in the transaction
+    // When we are writing out NSPasteboardTypeString, we create a string with one line per transaction and tabs between items in the transaction
     NSMutableString *result = [NSMutableString string];
     
     for (MecabNode *node in nodes) {
@@ -68,7 +68,7 @@
 #pragma mark /* Methods for writing to the pasteboard */
 
 - (NSArray *)writablePasteboardTypes {
-    return [NSArray arrayWithObjects:NSStringPboardType, nil];
+    return [NSArray arrayWithObjects:NSPasteboardTypeString, nil];
 }
 
 - (BOOL)writeSelectionToPasteboard:(NSPasteboard *)pboard types:(NSArray *)types {
@@ -93,9 +93,9 @@
     BOOL result = NO;
     NSArray *nodes = [tokenizationController selectedObjects];
     if (nodes && [nodes count] > 0) {
-        if ([type isEqualToString:NSStringPboardType]) {
+        if ([type isEqualToString:NSPasteboardTypeString]) {
             NSString *string = [self stringFromNodes:nodes];
-            if (string && [string length] > 0) result = [pboard setString:string forType:NSStringPboardType];
+            if (string && [string length] > 0) result = [pboard setString:string forType:NSPasteboardTypeString];
         }
     }
     return result;
@@ -114,7 +114,7 @@
 	BOOL result = NO;
     NSUInteger length = [string length], location = 0;
     NSRange lineRange;
-	NSMutableString *strings = [[[NSMutableString alloc] init] autorelease];
+	NSMutableString *strings = [[NSMutableString alloc] init];
 
 	while (location < length) {
 		lineRange = [string lineRangeForRange:NSMakeRange(location, 1)];
@@ -132,7 +132,7 @@
 }
 
 - (NSArray *)readablePasteboardTypes {
-    return [NSArray arrayWithObjects:NSStringPboardType, nil];
+    return [NSArray arrayWithObjects:NSPasteboardTypeString, nil];
 }
 
 - (BOOL)readSelectionFromPasteboard:(NSPasteboard *)pboard {
@@ -152,8 +152,8 @@
 
 - (BOOL)readSelectionFromPasteboard:(NSPasteboard *)pboard type:(NSString *)type {
     BOOL result = NO;
-	if ([type isEqualToString:NSStringPboardType]) {
-        NSString *string = [pboard stringForType:NSStringPboardType];
+	if ([type isEqualToString:NSPasteboardTypeString]) {
+        NSString *string = [pboard stringForType:NSPasteboardTypeString];
         if (string && [string length] > 0) result = [self addSourceFromString:string];
     }
     return result;}
@@ -174,27 +174,27 @@
 
 #pragma mark /* Methods for providing services */
 
++ (MyDocument *)frontDocument {
+    // -[NSDocumentController currentDocument] works only when the app is active, so use the window order instead
+    for (NSDocument *document in [NSApp orderedDocuments]) {
+        if ([document isKindOfClass:[MyDocument class]]) return (MyDocument *)document;
+    }
+    return nil;
+}
+
 + (void)tokenize:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error {
     // -[NSWindowController currentDocument] works only when app is active, so we use this alternative means of finding the front document
 	// [NSApp activateIgnoringOtherApps:YES];
 	// [NSApp activateWithOptions:NSApplicationActivateAllWindows];
-	NSWindowController *windowController = [[NSApp makeWindowsPerform:@selector(windowController) inOrder:YES] windowController];
-	// NSDocumentController *documentController = [NSDocumentController sharedDocumentController];
-	// [documentController newDocument:self];
-	// [windowController showWindow:self];
-	[[windowController window] orderFront:self];
-	
-	MyDocument *document = [windowController document];
-	// MyDocument *document = [documentController currentDocument];
+	MyDocument *document = [self frontDocument];
     if (document) {
-		// [document showWindows];
-		[document readSelectionFromPasteboard:pboard];	
+		[document showWindows];
+		[document readSelectionFromPasteboard:pboard];
 	}
 }
 
 + (void)exportData:(NSPasteboard *)pboard userData:(NSString *)data error:(NSString **)error {
-	NSWindowController *windowController = [[NSApp makeWindowsPerform:@selector(windowController) inOrder:YES] windowController];
-    MyDocument *document = [windowController document];
+    MyDocument *document = [self frontDocument];
     if (document) [document writeSelectionToPasteboard:pboard types:[document writablePasteboardTypes]];
 }
 

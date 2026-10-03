@@ -31,7 +31,7 @@
         
         // preset landscape for printing
         NSPrintInfo *printInfo = [self printInfo];
-        [printInfo setOrientation:NSLandscapeOrientation];
+        [printInfo setOrientation:NSPaperOrientationLandscape];
         [self setPrintInfo:printInfo];
                         
         // register service
@@ -85,10 +85,10 @@
 - (IBAction)translatePosTagsToggle:(id)sender
 {
     switch ([translatePosTagsCheckBox state]) {
-        case NSOnState:
+        case NSControlStateValueOn:
             translatePosTags = TRUE;
             break;
-        case NSOffState:
+        case NSControlStateValueOff:
             translatePosTags = FALSE;
             break;
         default:
@@ -125,7 +125,7 @@
 	if (currentPositionInHistory > 0) {
 		currentPositionInHistory--;
 		[source setStringValue:[sourceTextHistory objectAtIndex:currentPositionInHistory]];
-		[self performSelector:[source action] withObject:self];
+		[self tokenize:self];
 	}
 }
 
@@ -134,7 +134,7 @@
 	if (currentPositionInHistory < [sourceTextHistory count] - 1) {
 		currentPositionInHistory++;
 		[source setStringValue:[sourceTextHistory objectAtIndex:currentPositionInHistory]];
-		[self performSelector:[source action] withObject:self];
+		[self tokenize:self];
 	}	
 }
 
