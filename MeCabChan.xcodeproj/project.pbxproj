@@ -376,6 +376,7 @@
 			);
 			outputPaths = (
 				"$(SRCROOT)/vendor/mecab/lib/libmecab.a",
+				"$(SRCROOT)/vendor/mecab/include/mecab.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
