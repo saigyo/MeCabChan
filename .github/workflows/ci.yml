@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Cache MeCab
+        uses: actions/cache@v4
+        with:
+          path: vendor/mecab
+          key: mecab-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('scripts/build-mecab.sh') }}
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build and test
+        run: |
+          xcodebuild test \
+            -project MeCabChan.xcodeproj \
+            -scheme MeCabChan \
+            -configuration Debug \
+            -derivedDataPath build/dd
+
+      - name: Build Release
+        run: |
+          xcodebuild build \
+            -project MeCabChan.xcodeproj \
+            -scheme MeCabChan \
+            -configuration Release \
+            -derivedDataPath build/dd
