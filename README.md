@@ -7,6 +7,13 @@ A small OSX GUI for [MeCab](https://en.wikipedia.org/wiki/MeCab) to tokenize and
 
 ![Screenshot](https://github.com/saigyo/MeCabChan/blob/master/Screenshot-MeCabChan.png) 
 
+Download
+--------
+
+Download the DMG of the [latest release](https://github.com/saigyo/MeCabChan/releases/latest), open it and drag
+MeCabChan to your Applications folder. The app is signed and notarized and requires macOS 14 or later on Apple
+silicon.
+
 Building
 --------
 
