@@ -39,4 +39,68 @@
     XCTAssertEqualObjects([nodes[1] posTag], @"particle dependency");
 }
 
+- (void)testReportsMissingDictionaryDirectory
+{
+    NSString *missingPath = [[NSTemporaryDirectory() stringByAppendingPathComponent:[[NSUUID UUID] UUIDString]]
+                             stringByAppendingPathComponent:@"ipadic"];
+    NSError *error = nil;
+
+    MecabTagger *tagger = [[MecabTagger alloc] initWithDictionaryPath:missingPath
+                                                           configPath:missingPath
+                                                                error:&error];
+
+    XCTAssertNil(tagger);
+    XCTAssertNotNil(error);
+    XCTAssertEqualObjects(error.domain, MecabTaggerErrorDomain);
+    XCTAssertEqual(error.code, MecabTaggerErrorDictionaryMissing);
+    XCTAssertTrue(error.localizedDescription.length > 0);
+    XCTAssertTrue([error.localizedFailureReason containsString:missingPath]);
+}
+
+- (void)testReportsIncompleteDictionary
+{
+    NSString *directory = [NSTemporaryDirectory() stringByAppendingPathComponent:[[NSUUID UUID] UUIDString]];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    XCTAssertTrue([fileManager createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:NULL]);
+
+    NSError *error = nil;
+    MecabTagger *tagger = [[MecabTagger alloc] initWithDictionaryPath:directory
+                                                           configPath:directory
+                                                                error:&error];
+
+    XCTAssertNil(tagger);
+    XCTAssertEqualObjects(error.domain, MecabTaggerErrorDomain);
+    XCTAssertEqual(error.code, MecabTaggerErrorDictionaryIncomplete);
+    XCTAssertTrue([error.localizedFailureReason containsString:@"sys.dic"]);
+
+    [fileManager removeItemAtPath:directory error:NULL];
+}
+
+- (void)testReportsMissingConfig
+{
+    NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+    NSString *dictionaryPath = [resourcePath stringByAppendingPathComponent:@"ipadic"];
+    NSString *configPath = [resourcePath stringByAppendingPathComponent:@"mecabrc-missing"];
+    NSError *error = nil;
+
+    MecabTagger *tagger = [[MecabTagger alloc] initWithDictionaryPath:dictionaryPath
+                                                           configPath:configPath
+                                                                error:&error];
+
+    XCTAssertNil(tagger);
+    XCTAssertEqualObjects(error.domain, MecabTaggerErrorDomain);
+    XCTAssertEqual(error.code, MecabTaggerErrorConfigMissing);
+    XCTAssertTrue([error.localizedFailureReason containsString:configPath]);
+}
+
+- (void)testErrorIsNilOnSuccess
+{
+    NSError *error = nil;
+
+    MecabTagger *tagger = [[MecabTagger alloc] initWithError:&error];
+
+    XCTAssertNotNil(tagger);
+    XCTAssertNil(error);
+}
+
 @end
