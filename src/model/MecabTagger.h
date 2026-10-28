@@ -10,9 +10,23 @@
 #import "mecab.h"
 #import "MecabTagMap.h"
 
+extern NSString * const MecabTaggerErrorDomain;
+
+typedef NS_ENUM(NSInteger, MecabTaggerErrorCode) {
+    MecabTaggerErrorDictionaryMissing = 1,
+    MecabTaggerErrorDictionaryIncomplete,
+    MecabTaggerErrorConfigMissing,
+    MecabTaggerErrorCreationFailed,
+};
+
 @interface MecabTagger : NSObject {
 	mecab_t* mecab_tagger;
 }
+-(id)init;
+-(id)initWithError:(NSError **)error;
+-(id)initWithDictionaryPath:(NSString *)dictionaryPath
+                 configPath:(NSString *)configPath
+                      error:(NSError **)error;
 -(NSArray*)parse:(NSString*)sentence;
 -(NSArray*)parseToFeatures:(NSString*)sentence;
 -(NSArray*)parseToNodes:(NSString*)sentence;

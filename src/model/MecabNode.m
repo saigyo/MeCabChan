@@ -26,7 +26,6 @@
 +(id)nodeFromParseLine:(NSString*)line withNumber:(NSInteger)number withTagMap:(MecabTagMap*)tagMap withInflectionMap:(MecabTagMap *)inflectionMap
 {
 	MecabNode* node = [[MecabNode alloc] initFromParseLine:line withNumber:number withTagMap:tagMap withInflectionMap:inflectionMap];
-	// NSLog(@"Created %@", node);
 	return node;    
 }
 

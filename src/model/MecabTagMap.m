@@ -6,7 +6,18 @@
 //  Copyright 2011 kaixo.de. All rights reserved.
 //
 
+#import <os/log.h>
 #import "MecabTagMap.h"
+
+static os_log_t MecabTagMapLog(void)
+{
+    static os_log_t log = OS_LOG_DEFAULT;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        log = os_log_create("de.kaixo.MeCabChan", "TagMap");
+    });
+    return log;
+}
 
 @implementation MecabTagMap
 
@@ -21,7 +32,7 @@
         NSArray* parts = [line componentsSeparatedByString:@" "];
         
         if ([parts count]<3) {
-            NSLog(@"MecabTagMap.parse: oops, line %lu is too short: %@", (unsigned long)i, line);
+            os_log_error(MecabTagMapLog(), "malformed tag map line at index %lu", (unsigned long)i);
             continue;
         }
         
@@ -46,8 +57,6 @@
         NSString* tagSource = [NSString stringWithContentsOfFile:tagFile encoding:NSUTF8StringEncoding error:NULL];
         
         map = [MecabTagMap parse:tagSource];
-        
-        // NSLog(@"MecabTagMap.init: created map from %@: %@", tagFile, [map description]);
     }
     return self;    
 }
