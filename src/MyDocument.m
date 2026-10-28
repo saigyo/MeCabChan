@@ -6,13 +6,32 @@
 //  Copyright 2010 kaixo.de. All rights reserved.
 //
 
+#import <os/log.h>
 #import "MyDocument.h"
 #import "MyDocument_Pasteboard.h"
 
+static os_log_t MyDocumentLog(void)
+{
+    static os_log_t log = OS_LOG_DEFAULT;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        log = os_log_create("de.kaixo.MeCabChan", "Document");
+    });
+    return log;
+}
+
 @implementation MyDocument
 @synthesize mecabNodes;
+@synthesize taggerError;
 
 - (id)init
+{
+    NSError *error = nil;
+    MecabTagger *tagger = [[MecabTagger alloc] initWithError:&error];
+    return [self initWithTagger:tagger taggerError:error];
+}
+
+- (id)initWithTagger:(MecabTagger *)tagger taggerError:(NSError *)error
 {
 	static BOOL registeredServices = NO;
     static int nextDocumentNumber = 0;
@@ -22,7 +41,9 @@
 	    [sourceTextHistory addObject:@""];
 		currentPositionInHistory = 0;
 		mecabNodes = [[NSArray alloc] init];
-		mecab = [[MecabTagger alloc] init];
+		mecab = tagger;
+        taggerError = error;
+        didPresentTaggerError = NO;
         tagMap = [[MecabTagMap alloc] initFrom:@"chasen-tags.txt"];
         inflectionMap = [[MecabTagMap alloc] initFrom:@"ipadic-verb-inflections.txt"];
         translatePosTags = FALSE;
@@ -55,6 +76,11 @@
 
 -(IBAction)tokenize:(id)sender
 {
+    if (!mecab) {
+        [self presentTaggerError];
+        return;
+    }
+
 	NSString* sentence = [source stringValue];
 	if ([sentence length] > 0) {
 		NSArray* nodes = [mecab parseToNodes:sentence
@@ -65,10 +91,38 @@
 	}
 }
 
+- (void)presentTaggerError
+{
+    if (didPresentTaggerError) {
+        return;
+    }
+    didPresentTaggerError = YES;
+
+    os_log_error(MyDocumentLog(), "cannot tokenize: %{public}@", [taggerError localizedDescription] ?: @"unknown error");
+
+    NSAlert *alert = [[NSAlert alloc] init];
+    alert.messageText = @"MeCabChan can't tokenize";
+
+    NSMutableString *informativeText = [NSMutableString stringWithString:[taggerError localizedDescription] ?: @"MeCabChan could not load its Japanese dictionary."];
+    if ([taggerError localizedFailureReason]) {
+        [informativeText appendFormat:@"\n\n%@", [taggerError localizedFailureReason]];
+    }
+    [informativeText appendString:@"\n\nThe application may be incomplete. Reinstall MeCabChan from the DMG."];
+    alert.informativeText = informativeText;
+    [alert addButtonWithTitle:@"OK"];
+
+    NSWindow *window = self.windowControllers.firstObject.window;
+    if (window) {
+        [alert beginSheetModalForWindow:window completionHandler:nil];
+    } else {
+        [alert runModal];
+    }
+}
+
 - (IBAction)navigateHistory:(id)sender
 {
 	NSInteger selectedSegment = [historyNavigationControl selectedSegment];
-	NSLog(@"History navigation selected segment: %ld", selectedSegment);
+	os_log_debug(MyDocumentLog(), "history navigation selected segment %ld", (long)selectedSegment);
 	[historyNavigationControl setSelected:NO forSegment:selectedSegment];
 	switch (selectedSegment) {
 		case 0:
