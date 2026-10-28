@@ -33,8 +33,13 @@
     MecabTagMap *tagMap;
     MecabTagMap *inflectionMap;
     BOOL translatePosTags;
+    NSError *taggerError;
+    BOOL didPresentTaggerError;
 }
 @property (readwrite, strong) NSArray *mecabNodes;
+@property (readonly, strong) NSError *taggerError;
+- (id)initWithTagger:(MecabTagger *)tagger taggerError:(NSError *)error;
+- (void)presentTaggerError;
 - (IBAction)clearSource:(id)sender;
 - (IBAction)tokenize:(id)sender;
 - (IBAction)navigateHistory:(id)sender;
