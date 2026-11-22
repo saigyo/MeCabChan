@@ -19,6 +19,11 @@
 		289FAD5615C5AEFF009BC027 /* matrix.bin in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFA15C5A5C0004D05CD /* matrix.bin */; };
 		289FAD5A15C5AEFF009BC027 /* sys.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0BFF15C5A5C0004D05CD /* sys.dic */; };
 		289FAD5C15C5AEFF009BC027 /* unk.dic in Copy ipadic */ = {isa = PBXBuildFile; fileRef = 288D0C0115C5A5C0004D05CD /* unk.dic */; };
+		28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */; };
+		28B1D0252E9F000100C0FFEE /* LICENSE in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0222E9F000100C0FFEE /* LICENSE */; };
+		28B1D0262E9F000100C0FFEE /* MeCab.txt in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0232E9F000100C0FFEE /* MeCab.txt */; };
+		28B1D0272E9F000100C0FFEE /* IPADIC.txt in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0242E9F000100C0FFEE /* IPADIC.txt */; };
+		28B1D0292E9F000100C0FFEE /* MyDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B1D0282E9F000100C0FFEE /* MyDocumentTests.m */; };
 		28D66A741401A5EA0012D907 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 28D66A731401A5EA0012D907 /* AppIcon.icon */; };
 		28E6EA40127B7D4F00752C16 /* MyDocument_Pasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */; };
 		28F8985A141AC2C6003AD368 /* mecabrc in Resources */ = {isa = PBXBuildFile; fileRef = 28F89859141AC2C6003AD368 /* mecabrc */; };
@@ -27,12 +32,17 @@
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
-		28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */; };
-		28B1D0292E9F000100C0FFEE /* MyDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B1D0282E9F000100C0FFEE /* MyDocumentTests.m */; };
-		28B1D0252E9F000100C0FFEE /* LICENSE in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0222E9F000100C0FFEE /* LICENSE */; };
-		28B1D0262E9F000100C0FFEE /* MeCab.txt in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0232E9F000100C0FFEE /* MeCab.txt */; };
-		28B1D0272E9F000100C0FFEE /* IPADIC.txt in Copy licenses */ = {isa = PBXBuildFile; fileRef = 28B1D0242E9F000100C0FFEE /* IPADIC.txt */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28B1D0172E9F000100C0FFEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D15AC270486D014006FF6A4;
+			remoteInfo = MeCabChan;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		283BDA371278C1F500E0C537 /* Copy ipadic */ = {
@@ -65,16 +75,6 @@
 		};
 /* End PBXCopyFilesBuildPhase section */
 
-/* Begin PBXContainerItemProxy section */
-		28B1D0172E9F000100C0FFEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D15AC270486D014006FF6A4;
-			remoteInfo = MeCabChan;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -95,6 +95,12 @@
 		288D0BFA15C5A5C0004D05CD /* matrix.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = matrix.bin; sourceTree = "<group>"; };
 		288D0BFF15C5A5C0004D05CD /* sys.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = sys.dic; sourceTree = "<group>"; };
 		288D0C0115C5A5C0004D05CD /* unk.dic */ = {isa = PBXFileReference; lastKnownFileType = file; path = unk.dic; sourceTree = "<group>"; };
+		28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MecabTaggerTests.m; sourceTree = "<group>"; };
+		28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeCabChanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B1D0222E9F000100C0FFEE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		28B1D0232E9F000100C0FFEE /* MeCab.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MeCab.txt; sourceTree = "<group>"; };
+		28B1D0242E9F000100C0FFEE /* IPADIC.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = IPADIC.txt; sourceTree = "<group>"; };
+		28B1D0282E9F000100C0FFEE /* MyDocumentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDocumentTests.m; sourceTree = "<group>"; };
 		28D66A731401A5EA0012D907 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		28E6EA3E127B7D3800752C16 /* MyDocument_Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument_Pasteboard.h; sourceTree = "<group>"; };
 		28E6EA3F127B7D4F00752C16 /* MyDocument_Pasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDocument_Pasteboard.m; sourceTree = "<group>"; };
@@ -108,27 +114,21 @@
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D15AC360486D014006FF6A4 /* MeCabChan-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MeCabChan-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* MeCabChan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeCabChan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MecabTaggerTests.m; sourceTree = "<group>"; };
-		28B1D0282E9F000100C0FFEE /* MyDocumentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDocumentTests.m; sourceTree = "<group>"; };
-		28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeCabChanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		28B1D0222E9F000100C0FFEE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		28B1D0232E9F000100C0FFEE /* MeCab.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MeCab.txt; sourceTree = "<group>"; };
-		28B1D0242E9F000100C0FFEE /* IPADIC.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = IPADIC.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		28B1D0152E9F000100C0FFEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC330486D014006FF6A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28B1D0152E9F000100C0FFEE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +187,25 @@
 			);
 			name = ipadic;
 			path = vendor/ipadic;
+			sourceTree = "<group>";
+		};
+		28B1D01C2E9F000100C0FFEE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */,
+				28B1D0282E9F000100C0FFEE /* MyDocumentTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		28B1D0212E9F000100C0FFEE /* licenses */ = {
+			isa = PBXGroup;
+			children = (
+				28B1D0222E9F000100C0FFEE /* LICENSE */,
+				28B1D0232E9F000100C0FFEE /* MeCab.txt */,
+				28B1D0242E9F000100C0FFEE /* IPADIC.txt */,
+			);
+			path = licenses;
 			sourceTree = "<group>";
 		};
 		2A37F4AAFDCFA73011CA2CEA /* MeCabChan */ = {
@@ -251,28 +270,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		28B1D01C2E9F000100C0FFEE /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				28B1D0102E9F000100C0FFEE /* MecabTaggerTests.m */,
-				28B1D0282E9F000100C0FFEE /* MyDocumentTests.m */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		28B1D0212E9F000100C0FFEE /* licenses */ = {
-			isa = PBXGroup;
-			children = (
-				28B1D0222E9F000100C0FFEE /* LICENSE */,
-				28B1D0232E9F000100C0FFEE /* MeCab.txt */,
-				28B1D0242E9F000100C0FFEE /* IPADIC.txt */,
-			);
-			path = licenses;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		28B1D0132E9F000100C0FFEE /* MeCabChanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B1D0192E9F000100C0FFEE /* Build configuration list for PBXNativeTarget "MeCabChanTests" */;
+			buildPhases = (
+				28B1D0142E9F000100C0FFEE /* Sources */,
+				28B1D0152E9F000100C0FFEE /* Frameworks */,
+				28B1D0162E9F000100C0FFEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28B1D0182E9F000100C0FFEE /* PBXTargetDependency */,
+			);
+			name = MeCabChanTests;
+			productName = MeCabChanTests;
+			productReference = 28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8D15AC270486D014006FF6A4 /* MeCabChan */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "MeCabChan" */;
@@ -294,31 +312,14 @@
 			productReference = 8D15AC370486D014006FF6A4 /* MeCabChan.app */;
 			productType = "com.apple.product-type.application";
 		};
-		28B1D0132E9F000100C0FFEE /* MeCabChanTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 28B1D0192E9F000100C0FFEE /* Build configuration list for PBXNativeTarget "MeCabChanTests" */;
-			buildPhases = (
-				28B1D0142E9F000100C0FFEE /* Sources */,
-				28B1D0152E9F000100C0FFEE /* Frameworks */,
-				28B1D0162E9F000100C0FFEE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28B1D0182E9F000100C0FFEE /* PBXTargetDependency */,
-			);
-			name = MeCabChanTests;
-			productName = MeCabChanTests;
-			productReference = 28B1D0122E9F000100C0FFEE /* MeCabChanTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 2650;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2720;
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "MeCabChan" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -341,6 +342,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		28B1D0162E9F000100C0FFEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,19 +364,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28B1D0162E9F000100C0FFEE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		28B1D0012E9F000100C0FFEE /* Build MeCab */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 0;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -396,6 +396,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		28B1D0142E9F000100C0FFEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */,
+				28B1D0292E9F000100C0FFEE /* MyDocumentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D15AC300486D014006FF6A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,16 +418,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28B1D0142E9F000100C0FFEE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28B1D0112E9F000100C0FFEE /* MecabTaggerTests.m in Sources */,
-				28B1D0292E9F000100C0FFEE /* MyDocumentTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28B1D0182E9F000100C0FFEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D15AC270486D014006FF6A4 /* MeCabChan */;
+			targetProxy = 28B1D0172E9F000100C0FFEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
@@ -455,176 +463,7 @@
 		};
 /* End PBXVariantGroup section */
 
-/* Begin PBXTargetDependency section */
-		28B1D0182E9F000100C0FFEE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D15AC270486D014006FF6A4 /* MeCabChan */;
-			targetProxy = 28B1D0172E9F000100C0FFEE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		C05733C808A9546B00998B17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_HARDENED_RUNTIME = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = MeCabChan_Prefix.pch;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/include";
-				INFOPLIST_FILE = "MeCabChan-Info.plist";
-				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/lib";
-				OTHER_LDFLAGS = (
-					"-lmecab",
-					"-lc++",
-					"-liconv",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.kaixo.MeCabChan;
-				PRODUCT_NAME = MeCabChan;
-			};
-			name = Debug;
-		};
-		C05733C908A9546B00998B17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = MeCabChan_Prefix.pch;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/include";
-				INFOPLIST_FILE = "MeCabChan-Info.plist";
-				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/lib";
-				OTHER_LDFLAGS = (
-					"-lmecab",
-					"-lc++",
-					"-liconv",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.kaixo.MeCabChan;
-				PRODUCT_NAME = MeCabChan;
-			};
-			name = Release;
-		};
-		C05733CC08A9546B00998B17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
-				DEAD_CODE_STRIPPING = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1;
-				SDKROOT = macosx;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				ONLY_ACTIVE_ARCH = YES;
-			};
-			name = Debug;
-		};
-		C05733CD08A9546B00998B17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
-				DEAD_CODE_STRIPPING = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1;
-				SDKROOT = macosx;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-			};
-			name = Release;
-		};
 		28B1D01A2E9F000100C0FFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -653,9 +492,185 @@
 			};
 			name = Release;
 		};
+		C05733C808A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MeCabChan_Prefix.pch;
+				INFOPLIST_FILE = "MeCabChan-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/lib";
+				OTHER_LDFLAGS = (
+					"-lmecab",
+					"-lc++",
+					"-liconv",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.kaixo.MeCabChan;
+				PRODUCT_NAME = MeCabChan;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/include";
+			};
+			name = Debug;
+		};
+		C05733C908A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MeCabChan.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MeCabChan_Prefix.pch;
+				INFOPLIST_FILE = "MeCabChan-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/lib";
+				OTHER_LDFLAGS = (
+					"-lmecab",
+					"-lc++",
+					"-liconv",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.kaixo.MeCabChan;
+				PRODUCT_NAME = MeCabChan;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/mecab/include";
+			};
+			name = Release;
+		};
+		C05733CC08A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = Debug;
+		};
+		C05733CD08A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		28B1D0192E9F000100C0FFEE /* Build configuration list for PBXNativeTarget "MeCabChanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28B1D01A2E9F000100C0FFEE /* Debug */,
+				28B1D01B2E9F000100C0FFEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "MeCabChan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -670,15 +685,6 @@
 			buildConfigurations = (
 				C05733CC08A9546B00998B17 /* Debug */,
 				C05733CD08A9546B00998B17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		28B1D0192E9F000100C0FFEE /* Build configuration list for PBXNativeTarget "MeCabChanTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28B1D01A2E9F000100C0FFEE /* Debug */,
-				28B1D01B2E9F000100C0FFEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
